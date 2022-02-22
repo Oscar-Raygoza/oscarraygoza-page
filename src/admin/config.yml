@@ -1,0 +1,50 @@
+backend:
+  name: github
+  repo: Oscar-Raygoza/oscarraygoza-blog
+
+media_folder: 'static/uploads'
+public_folder: 'uploads'
+
+collections:
+  - name: 'posts'
+    label: 'Posts'
+    folder: 'content/posts'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - {
+          label: 'Post Author',
+          name: 'author',
+          widget: 'relation',
+          collection: 'authors',
+          searchFields: ['id, title'],
+          valueField: 'id',
+          displayFields: ['title'],
+        }
+      - {
+          label: 'Tags',
+          name: 'tags',
+          widget: 'select',
+          multiple: true,
+          min: 1,
+          max: 3,
+          options: ['Development', 'UX', 'Design'],
+          default: ['Development'],
+        }
+      - { label: 'Excerpt', name: 'excerpt', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Featured Image', name: 'featuredImage', widget: 'image' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'authors'
+    label: 'Authors'
+    folder: 'content/authors'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: 'Name', name: 'title', widget: 'string' }
+      - { label: 'Email', name: 'email', widget: 'string' }
+      - { label: 'Blurb', name: 'blurb', widget: 'string' }
+      - { label: 'Link', name: 'link', widget: 'string' }
+      - { label: 'Author Image', name: 'image', widget: 'image' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
