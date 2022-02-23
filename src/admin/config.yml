@@ -1,6 +1,7 @@
 backend:
   name: github
-  repo: chad-collins/gridsome-starter-netlifycms-buefy
+  branch: main
+  repo: Oscar-Raygoza/oscarraygoza-page
 
 media_folder: 'static/uploads'
 public_folder: 'uploads'

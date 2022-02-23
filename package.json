@@ -1,6 +1,7 @@
 {
-  "name": "my-blog",
-  "private": true,
+  "name": "oscarraygoza-page",
+  "version": "1.0.1",
+  "private": false,
   "scripts": {
     "build": "gridsome build",
     "develop": "gridsome develop",

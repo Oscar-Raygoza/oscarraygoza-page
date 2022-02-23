@@ -1,4 +1,5 @@
 ---
+id: oscar-raygoza
 title: Oscar Eduardo Raygoza
 email: oscar.eduardo.raygoza@gmail.com
 blurb: Desarrollador Web
