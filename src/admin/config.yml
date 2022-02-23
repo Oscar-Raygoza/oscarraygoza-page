@@ -38,11 +38,13 @@ collections:
       - { label: 'Featured Image', name: 'featuredImage', widget: 'image' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'authors'
+    id: '{{id}}'
     label: 'Authors'
     folder: 'content/authors'
     create: true
     slug: '{{slug}}'
     fields:
+      - { label: 'id', name: 'id', widget: 'string' }
       - { label: 'Name', name: 'title', widget: 'string' }
       - { label: 'Email', name: 'email', widget: 'string' }
       - { label: 'Blurb', name: 'blurb', widget: 'string' }
