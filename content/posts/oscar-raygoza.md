@@ -1,6 +1,6 @@
 ---
 title: Oscar Raygoza
-author: chad-collins
+author: oscar-raygoza
 tags:
   - Development
 excerpt: test
