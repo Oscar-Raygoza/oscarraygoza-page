@@ -1,9 +1,9 @@
 ---
-id: oscar-raygoza
-title: 'Oscar Raygoza'
-link: 'github.com/Oscar-Raygoza'
+id: chad-collins
+title: 'Chad Collins'
+link: 'github.com/chad-collins'
 image: 'uploads/author-images/author-avatar.png'
-email: 'oscar.eduardo.raygoza@gmail.com'
+email: 'contact@chadcollins.net'
 blurb: 'a little somethin somethin'
 ---
 

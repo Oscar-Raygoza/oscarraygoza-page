@@ -1,5 +1,5 @@
 {
-  "name": "my-page",
+  "name": "my-blog",
   "private": true,
   "scripts": {
     "build": "gridsome build",
