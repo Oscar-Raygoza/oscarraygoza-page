@@ -1,19 +1,34 @@
 <template>
-  <b-navbar>
-    <template slot="brand">
-      <b-navbar-item tag="router-link" :to="{ path: '/' }">
-        <img
-          src="@/assets/images/branding.png"
-          alt="Lightweight UI components for Vue.js based on Bulma"
-        />
-      </b-navbar-item>
-    </template>
-    <template slot="start">
-      <b-navbar-item to="/about" tag="router-link">
-        About
-      </b-navbar-item>
-    </template>
-
-    <template slot="end"> </template>
-  </b-navbar>
+  <nav class="ml-auto">
+    <ul class="flex">
+      <li v-for="item in nav" :key="'nav-item-' + item.label">
+        <g-link class="font-semibold lowercase ml-6 links" :to="item.to">
+          {{ item.label }}
+        </g-link>
+      </li>
+    </ul>
+  </nav>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      nav: [
+        {
+          label: 'about',
+          to: '/about',
+        },
+        {
+          label: 'blog',
+          to: '/blog',
+        },
+        {
+          label: 'projects',
+          to: '/projects',
+        },
+      ],
+    }
+  },
+}
+</script>

@@ -1,0 +1,37 @@
+/**
+ * @copyright Oscar Raygoza
+ * @description page sass base
+ * @author Oscar Eduardo Raygoza
+ * @creationDate 06 de Septiembre del 2021
+ */
+
+/* Basic */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  @apply bg-bg text-text transition-colors duration-200 ease-in-out;
+}
+
+.aka-section-heading {
+  @apply text-2xl font-bold leading-none mb-6;
+}
+
+@screen lg {
+  .aka-section-heading {
+    @apply text-4xl mb-8;
+  }
+}
+
+.aka-pagination-navigation {
+  & a.active {
+    @apply font-bold border-b-2 border-primary;
+  }
+}
+
+.aka-card-image {
+  padding-bottom: 56.25%;
+}

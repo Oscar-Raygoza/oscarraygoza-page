@@ -1,0 +1,46 @@
+/**
+ * @copyright Oscar Raygoza
+ * @author Oscar Eduardo Raygoza <omiramontes@palaceresorts.com>
+ * @version v0.1.0
+ * @description _submenu.scss
+ * @creationDate 13/October/2021
+ */
+
+.submenu {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background-color: _palette(bg);
+  text-align: left;
+  min-height: 322px;
+}
+
+.container__list {
+  display: inline-grid;
+  width: 50%;
+}
+.container__list--title {
+  font-family: "Miso-Bold";
+  text-transform: uppercase;
+  font-size: 22px;
+  color: _palette(activeLink) !important;
+  padding: 0;
+  margin-bottom: 5px;
+}
+.container__list--link {
+  font-size: 14px;
+  font-style: inherit;
+  line-height: 1.33333;
+  font-weight: 700;
+  display: inline-block;
+  font-family: _font(family-apple);
+  margin-bottom: 4px;
+  display: inherit;
+  margin-top: 5px; &>a {
+      color: _palette(navlinks);
+      &:hover {
+          color: _palette(fontColor);
+      }
+  }
+}

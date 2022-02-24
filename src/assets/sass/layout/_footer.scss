@@ -1,0 +1,136 @@
+/**
+ * @copyright Oscar Raygoza
+ * @author Oscar Eduardo Raygoza <omiramontes@palaceresorts.com>
+ * @version v0.1.0
+ * @description _footer.scss
+ * @creationDate 08/October/2021
+ */
+
+#footer {
+  background-color: _palette(footer);
+}
+
+.footer__item > .footer__item--list {
+  display: none;
+}
+
+.footer__item > a {
+  color: _palette(fontColor);
+  width: 100%;
+  border-bottom: 1px solid _palette(fontColor);
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 0 5px;
+  font-family: "Miso-Bold";
+  font-size: 20px;
+  &:hover {
+    color: _palette(primary);
+  }
+}
+
+.footer__item:hover .footer__item--list {
+  display: block;
+}
+
+.footer__item--list > a {
+  color: _palette(fontColor);
+  width: 100%;
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 0 5px;
+  font-family: "Miso";
+  margin-left: 10px;
+  font-size: 24px;
+  &:hover {
+    color: _palette(activeLink);
+  }
+  animation: dropList 800ms ease-in-out forwards;
+}
+
+.flex__item.awards {
+  width: calc(23% - 1.5em);
+  text-align: center;
+
+  @include breakpoint(">=xxsmall") {
+    width: calc(100%);
+  }
+  @include breakpoint(">=xsmall") {
+    width: calc(37%);
+  }
+  @include breakpoint(">=small") {
+    width: calc(35%);
+  }
+  @include breakpoint(">=large") {
+    width: calc(48% - 1.5em);
+  }
+}
+
+.flex__item.partners {
+  width: calc(49% - 1.5em);
+  text-align: center;
+
+  @include breakpoint(">=xxsmall") {
+    width: calc(100%);
+  }
+  @include breakpoint(">=xsmall") {
+    width: calc(37%);
+  }
+  @include breakpoint(">=small") {
+    width: calc(35%);
+  }
+  @include breakpoint(">=large") {
+    width: calc(48% - 1.5em);
+  }
+}
+.flex__item.partners > img {
+  @include breakpoint(">=xxsmall") {
+    width: 150px;
+    height: auto;
+  }
+  @include breakpoint(">=medium") {
+    width: auto;
+    height: auto;
+  }
+}
+
+.flex__title {
+  width: 100%;
+  border-bottom: 1px solid _palette(fontColor);
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Miso-Light";
+  font-size: 24px;
+  margin-top: 30px;
+}
+
+@keyframes dropList {
+  0% {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+
+  80% {
+    transform: translateX(-5px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes dropListX {
+  0% {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+
+  80% {
+    transform: translateX(-5px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}

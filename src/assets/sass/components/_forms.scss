@@ -1,0 +1,248 @@
+/**
+ * @copyright Oscar Raygoza
+ * @description routes sass base
+ * @author Oscar Eduardo Raygoza
+ * @creationDate 09 de Septiembre del 2021
+ */
+
+.modalform {
+  background-color: _palette(modal);
+  width: 100%;
+  height: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 20px 20px 20px 20px;
+}
+
+.title__container {
+  color: _palette(primary);
+  font-family: "Miso-Light";
+  font-size: 42px;
+  font-weight: 100;
+  letter-spacing: 0.84px;
+  line-height: 35px;
+  margin: 20px;
+  text-transform: uppercase;
+}
+.title__container--subtitle.primary {
+  font-size: 16px;
+  line-height: 1.33333;
+  font-weight: 700;
+  display: inline-block;
+  font-family: _font(family-apple);
+  margin-bottom: 4px;
+}
+
+.success__user {
+  color: _palette(activeLink);
+  font-family: "Miso";
+}
+
+.flex__container--list {
+  width: 100%;
+}
+
+.container__list--agencies {
+  width: 100%;
+  min-height: 300px;
+  height: auto;
+  background-color: _palette(list);
+}
+
+.center {
+  justify-content: center;
+  display: flex;
+  margin-top: 75px;
+  margin-bottom: 75px;
+}
+
+/* Radio Button */
+
+/* Radios*/
+.rad-label {
+  display: inline-flex;
+  align-items: center;
+
+  border-radius: 100px;
+  padding: 14px 16px;
+  margin: 10px 0;
+
+  cursor: pointer;
+}
+
+.rad-label:hover,
+.rad-label:focus-within {
+  background: hsla(0, 0%, 80%, 0.14);
+}
+
+.rad-input {
+  position: absolute;
+}
+
+.rad-design {
+  width: 22px;
+  height: 22px;
+  border-radius: 100px;
+
+  background: linear-gradient(
+    to right bottom,
+    _palette(primary),
+    _palette(activeLink)
+  );
+  position: relative;
+}
+
+.rad-design::before {
+  content: "";
+
+  display: inline-block;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+
+  background: hsl(0, 0%, 90%);
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+.rad-input:checked + .rad-design::before {
+  transform: scale(0);
+}
+
+.rad-text {
+  color: hsl(0, 0%, 60%);
+  margin-left: 14px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 900;
+  font-family: "Miso";
+  transition: 0.3s;
+}
+
+.rad-input:checked ~ .rad-text {
+  color: hsl(0, 0%, 40%);
+}
+
+/* Table Styles */
+
+.table-wrapper {
+  box-shadow: 0px 35px 50px rgba(0, 0, 0, 0.2);
+}
+
+.fl-table {
+  border-radius: 5px;
+  font-weight: normal;
+  border: none;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 100%;
+  white-space: nowrap;
+  background-color: white;
+
+  font-family: "Miso-Light";
+  text-transform: uppercase;
+}
+
+.fl-table td,
+.fl-table th {
+  text-align: center;
+  padding: 8px;
+}
+
+.fl-table td {
+  border-right: 1px solid #f8f8f8;
+  color: _palette(bg);
+}
+
+.fl-table thead th {
+  color: _palette(bg);
+  background: _palette(activeLink);
+}
+
+.fl-table thead th:nth-child(odd) {
+  color: _palette(fontColor);
+  background: _palette(primary);
+}
+
+.fl-table tr:nth-child(even) {
+  background: #f8f8f8;
+}
+
+/* Responsive */
+
+@media (max-width: 767px) {
+  .rad-label {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .fl-table {
+    display: block;
+    width: 100%;
+  }
+  .table-wrapper:before {
+    content: "Scroll horizontally >";
+    display: block;
+    text-align: right;
+    font-size: 11px;
+    color: _palette(activeLink);
+    padding: 0 0 10px;
+    font-family: "Miso";
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+  .fl-table thead,
+  .fl-table tbody,
+  .fl-table thead th {
+    display: block;
+  }
+  .fl-table thead th:last-child {
+    border-bottom: none;
+  }
+  .fl-table thead {
+    float: left;
+  }
+  .fl-table tbody {
+    width: auto;
+    position: relative;
+    overflow-x: auto;
+  }
+  .fl-table td,
+  .fl-table th {
+    padding: 20px 0.625em 0.625em 0.625em;
+    height: 60px;
+    vertical-align: middle;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 120px;
+    font-size: 18px;
+    text-overflow: ellipsis;
+  }
+  .fl-table td {
+    width: auto;
+  }
+  .fl-table thead th {
+    text-align: left;
+  }
+  .fl-table tbody tr {
+    display: table-cell;
+  }
+  .fl-table tbody tr:nth-child(odd) {
+    background: none;
+  }
+  .fl-table tr:nth-child(even) {
+    background: transparent;
+  }
+  .fl-table tr td:nth-child(odd) {
+    background: #f8f8f8;
+    border-right: 1px solid #e6e4e4;
+  }
+  .fl-table tr td:nth-child(even) {
+    border-right: 1px solid #e6e4e4;
+  }
+  .fl-table tbody td {
+    display: block;
+    text-align: center;
+  }
+}

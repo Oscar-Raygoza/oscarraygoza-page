@@ -1,6 +1,20 @@
 <template>
-  <div class="layout">
-    <Navbar />
+  <div>
+    <header class="flex items-center mb-6 h-20">
+      <div class="container flex items-center justify-between">
+        <div class="app-logo">
+          <g-link to="/">
+              <img
+                class="img-logo"
+                src="@/assets/images/logo.png"
+                alt="Oscar Raygoza Logo"
+              />
+          </g-link>
+        </div>
+        <Navbar />
+        <ThemeToggle />
+      </div>
+    </header>
     <section class="hero is-medium is-primary">
       <div class="hero-body">
         <div class="container">
@@ -16,15 +30,6 @@
     <main>
       <slot />
     </main>
-    <footer class="footer">
-      <div class="content has-text-centered">
-        <p>
-          Created by <a href="chadcollins.net"><strong>Chad Collins</strong></a
-          >. Powered by <a href="https://gridsome.org/"><strong>Gridsome</strong></a
-          >.
-        </p>
-      </div>
-    </footer>
   </div>
 </template>
 
@@ -38,15 +43,14 @@ query {
 
 <script>
 import Navbar from '../components/Navbar';
+import ThemeToggle from '@/components/ThemeToggle.vue';
 export default {
   props: { pageTitle: '', pageSubtitle: '', color: '' },
-  components: { Navbar },
+  components: { Navbar, ThemeToggle },
 };
 </script>
 
 <style lang="scss">
-@import '@/assets/scss/overrides.scss';
-
 body {
   font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
     Arial, sans-serif;

@@ -73,12 +73,3 @@ export default {
   components: { PostItem },
 };
 </script>
-
-<style lang="scss" scoped>
-@import '@/assets/scss/overrides.scss';
-
-.post {
-  padding-bottom: 1rem;
-  border-bottom: 12px solid $primary;
-}
-</style>

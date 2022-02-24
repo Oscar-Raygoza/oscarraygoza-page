@@ -11,12 +11,16 @@
     "@gridsome/remark-prismjs": "^0.3.0",
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.6.4",
+    "autoprefixer": "^10.4.2",
     "buefy": "^0.8.20",
     "gridsome": "^0.7.0",
     "gridsome-plugin-netlify-cms": "^1.0.9",
     "netlify-cms": "^2.10.55",
     "node-sass": "^4.14.1",
-    "sass-loader": "^9.0.2"
+    "postcss": "^8.4.6",
+    "sass-loader": "^9.0.2",
+    "tailwindcss": "^3.0.23",
+    "vue-feather-icons": "^5.1.0"
   },
   "devDependencies": {
     "eslint": "^7.2.0",
@@ -30,5 +34,11 @@
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-react-hooks": "^4.0.0",
     "prettier": "^2.0.5"
+  },
+  "postcss": {
+    "plugins": {
+      "tailwindcss": {},
+      "autoprefixer": {}
+    }
   }
 }

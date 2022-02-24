@@ -1,0 +1,17 @@
+/**
+ * @copyright Oscar Raygoza
+ * @author Oscar Eduardo Raygoza <omiramontes@palaceresorts.com>
+ * @version v0.1.0
+ * @description _html-flex.scss
+ * @creationDate 01/October/2021
+ */
+
+.flex__container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.flex__item {
+  margin: 1em 1em 1em 1em;
+  width: calc(49% - 1.5em);
+  height: auto;
+}

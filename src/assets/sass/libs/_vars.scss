@@ -1,0 +1,87 @@
+/**
+ * @copyright Oscar Raygoza
+ * @description vars global sass base
+ * @author Oscar Eduardo Raygoza
+ * @creationDate 06 de Septiembre del 2021
+ */
+
+// Misc.
+$misc: (
+  z-index-base: 10000,
+  max-wrapper-styles: 6,
+);
+
+// Duration.
+$duration: (
+  menu: 0.35s,
+  transition: 0.2s,
+);
+
+// Size.
+$size: (
+  border-radius: 5px,
+  element-height: 2.75em,
+  element-margin: 2em,
+  inner: 55em,
+  section-spacing: (
+    large: 3em,
+    medium: 2em,
+    small: 1.75em,
+  ),
+  wrapper-edges: (
+    large: 6.5em,
+    medium: 4.75em,
+    small: 2.5em,
+  ),
+);
+
+// Font.
+$font: (
+  family: (
+    "Open Sans",
+    sans-serif,
+  ),
+  title: (
+    "Miso",
+  ),
+  titleLight: (
+    "Miso-Light",
+  ),
+  titleBold: (
+    "Miso-Bold",
+  ),
+  family-fixed: (
+    "Open Sans",
+    sans-serif,
+  ),
+  family-heading: (
+    "Open Sans",
+    sans-serif,
+  ),
+  family-apple: (
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
+  ),
+  weight: 300,
+  weight-bold: 600,
+  weight-heading: 200,
+  weight-heading-bold: 700,
+  kern-heading: 0.1em,
+);
+
+// Palette.
+$palette: (
+  color-primary: var(--color-primary),
+  color-secondary: var(--color-secondary) ,
+  color-black: var(--color-black) ,
+  color-white: var(--color-white) ,
+  color-gray: var(--color-gray) ,
+  color-light-gray: var(--light-gray-gray) ,
+  color-danger: var(--color-danger) ,
+  color-success: var(--color-success) ,
+  color-warning: var(--color-warning) ,
+  color-bg: var(--color-white),
+  color-text: var(--color-black),
+  color-card: var(--color-light-gray),
+  color-footer: var(--color-light-gray),
+);
