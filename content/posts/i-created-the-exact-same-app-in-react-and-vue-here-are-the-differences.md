@@ -272,7 +272,7 @@ featuredImage: uploads/1-wrzdzndjcduhwqgopwmbhq.png
 >
 > Along with this, you’ll notice that we actually reference a **function** when we add **ToDoItem.vue** inside of **ToDo.vue**:
 >
-> ```
+> ```javascript
 > createNewToDoItem = () => {
 >     this.setState( ({ list, todo }) => ({
 >       list: [
