@@ -8,8 +8,6 @@ excerpt: REST
 date: 2022-02-24T18:28:38.917Z
 featuredImage: uploads/1-wrzdzndjcduhwqgopwmbhq.png
 ---
->
->
 > [](https://sunilsandhu.medium.com/?source=post_page-----e9a1ae8077fd-----------------------------------)
 >
 > [](https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2F_%2Fbookmark%2Fp%2Fe9a1ae8077fd&operation=register&redirect=https%3A%2F%2Fjavascript.plainenglish.io%2Fi-created-the-exact-same-app-in-react-and-vue-here-are-the-differences-e9a1ae8077fd&source=post_actions_header--------------------------bookmark_preview--------------)Having used Vue at work, I had a fairly solid understanding of it. I was, however, curious to know what the grass was like on the other side of the fence — the grass in this scenario being React.
@@ -20,7 +18,7 @@ featuredImage: uploads/1-wrzdzndjcduhwqgopwmbhq.png
 >
 > *Note: there is a new version of this article that can be found here:*
 >
-> ## [I created the exact same app in React and Vue. Here are the differences. \[2021 Edition]](https://javascript.plainenglish.io/i-created-the-exact-same-app-in-react-and-vue-here-are-the-differences-2021-edition-a7ebfc19a9d)
+> ## \[I created the exact same app in React and Vue. Here are the differences. [2021 Edition]](https://javascript.plainenglish.io/i-created-the-exact-same-app-in-react-and-vue-here-are-the-differences-2021-edition-a7ebfc19a9d)
 >
 > ### [React vs Vue. A side-by-side code comparison between Vue and React! 🎉](https://javascript.plainenglish.io/i-created-the-exact-same-app-in-react-and-vue-here-are-the-differences-2021-edition-a7ebfc19a9d)
 >
@@ -62,7 +60,7 @@ featuredImage: uploads/1-wrzdzndjcduhwqgopwmbhq.png
 >
 > Now that’s out of the way, let’s get into the nitty gritty detail!
 >
-> ***By the way if you’re enjoying this content so far,** I’ve just launched a YouTube channel! It would be amazing if you could support me by **[subscribing to my YouTube channel](https://www.youtube.com/channel/UCtipWUghju290NWcn8jhyAw?sub_confirmation=true)!***
+> **\*By the way if you’re enjoying this content so far,** I’ve just launched a YouTube channel! It would be amazing if you could support me by **[subscribing to my YouTube channel](https://www.youtube.com/channel/UCtipWUghju290NWcn8jhyAw?sub_confirmation=true)!***
 >
 > # **How do we mutate data?**
 >
@@ -92,7 +90,7 @@ featuredImage: uploads/1-wrzdzndjcduhwqgopwmbhq.png
 >
 > Now that we have mutations out of the way, let’s get into the nitty, gritty by looking at how we would go about adding new items to both of our To Do Apps.
 >
-> *Enjoying this article? If so, get more similar content by **[subscribing to Decoded, my YouTube channel](https://www.youtube.com/channel/UCtipWUghju290NWcn8jhyAw)!***
+> \*Enjoying this article? If so, get more similar content by **[subscribing to Decoded, my YouTube channel](https://www.youtube.com/channel/UCtipWUghju290NWcn8jhyAw)!***
 >
 > # **How do we create new To Do Items?**
 >
@@ -123,7 +121,18 @@ featuredImage: uploads/1-wrzdzndjcduhwqgopwmbhq.png
 > ## **Vue:**
 >
 > ```
->
+> createNewToDoItem = () => {
+>     this.setState( ({ list, todo }) => ({
+>       list: [
+>           ...list,
+>         {
+>           todo
+>         }
+>       ],
+>       todo: ''
+>     })
+>   );
+> };
 > ```
 >
 > ## **How did Vue do that?**
@@ -131,7 +140,18 @@ featuredImage: uploads/1-wrzdzndjcduhwqgopwmbhq.png
 > In Vue, our **input** field has a handle on it called **v-model**. This allows us to do something known as **two-way binding**. Let’s just quickly look at our input field, then we’ll explain what is going on:
 >
 > ```
->
+> createNewToDoItem = () => {
+>     this.setState( ({ list, todo }) => ({
+>       list: [
+>           ...list,
+>         {
+>           todo
+>         }
+>       ],
+>       todo: ''
+>     })
+>   );
+> };
 > ```
 >
 > V-Model ties the input of this field to a key we have in our data object called toDoItem. When the page loads, we have toDoItem set to an empty string, as such: **todo: ‘’**. If this had some data already in there, such as **todo: ‘add some text here’**, our input field would load with *add some text here* already inside the input field. Anyway, going back to having it as an empty string, whatever text we type inside the input field gets bound to the value for **todo**. This is effectively two-way binding (the input field can update the data object and the data object can update the input field).
@@ -143,7 +163,18 @@ featuredImage: uploads/1-wrzdzndjcduhwqgopwmbhq.png
 > ## **React:**
 >
 > ```
->
+> createNewToDoItem = () => {
+>     this.setState( ({ list, todo }) => ({
+>       list: [
+>           ...list,
+>         {
+>           todo
+>         }
+>       ],
+>       todo: ''
+>     })
+>   );
+> };
 > ```
 >
 > ## How did React do that?
@@ -151,13 +182,35 @@ featuredImage: uploads/1-wrzdzndjcduhwqgopwmbhq.png
 > So whilst the deleteItem function is located inside **ToDo.js**, I was very easily able to make reference to it inside **ToDoItem.js** by firstly, passing the **deleteItem()** function as a prop on **<ToDoItem/>** as such:
 >
 > ```
->
+> createNewToDoItem = () => {
+>     this.setState( ({ list, todo }) => ({
+>       list: [
+>           ...list,
+>         {
+>           todo
+>         }
+>       ],
+>       todo: ''
+>     })
+>   );
+> };
 > ```
 >
 > This firstly passes the function down to make it accessible to the child. You’ll see here that we’re also binding **this** as well as passing the key parameter, as key is what the function is going to use to be able to differentiate between which **ToDoItem** is attempting to delete when clicked. Then, inside the **ToDoItem** component, we do the following:
 >
 > ```
->
+> createNewToDoItem = () => {
+>     this.setState( ({ list, todo }) => ({
+>       list: [
+>           ...list,
+>         {
+>           todo
+>         }
+>       ],
+>       todo: ''
+>     })
+>   );
+> };
 > ```
 >
 > All I had to do to reference a function that sat inside the parent component was to reference **this.props.deleteItem**.
@@ -165,7 +218,18 @@ featuredImage: uploads/1-wrzdzndjcduhwqgopwmbhq.png
 > ## Vue:
 >
 > ```
->
+> createNewToDoItem = () => {
+>     this.setState( ({ list, todo }) => ({
+>       list: [
+>           ...list,
+>         {
+>           todo
+>         }
+>       ],
+>       todo: ''
+>     })
+>   );
+> };
 > ```
 >
 > ## How did Vue do that?
@@ -175,19 +239,52 @@ featuredImage: uploads/1-wrzdzndjcduhwqgopwmbhq.png
 > Firstly, on the element we want to call the function:
 >
 > ```
->
+> createNewToDoItem = () => {
+>     this.setState( ({ list, todo }) => ({
+>       list: [
+>           ...list,
+>         {
+>           todo
+>         }
+>       ],
+>       todo: ''
+>     })
+>   );
+> };
 > ```
 >
 > Then we have to create an emit function as a method inside the child component (in this case, **ToDoItem.vue**), which looks like this:
 >
 > ```
->
+> createNewToDoItem = () => {
+>     this.setState( ({ list, todo }) => ({
+>       list: [
+>           ...list,
+>         {
+>           todo
+>         }
+>       ],
+>       todo: ''
+>     })
+>   );
+> };
 > ```
 >
 > Along with this, you’ll notice that we actually reference a **function** when we add **ToDoItem.vue** inside of **ToDo.vue**:
 >
 > ```
->
+> createNewToDoItem = () => {
+>     this.setState( ({ list, todo }) => ({
+>       list: [
+>           ...list,
+>         {
+>           todo
+>         }
+>       ],
+>       todo: ''
+>     })
+>   );
+> };
 > ```
 >
 > This is what is known as a custom event-listener. It listens out for any occasion where an emit is triggered with the string of ‘delete’. If it hears this, it triggers a function called **onDeleteItem**. This function sits inside of **ToDo.vue,** rather than **ToDoItem.vue**. This function, as listed earlier, simply filters the **todo array** insidethe **data object** to remove the item that was clicked on.
@@ -312,8 +409,6 @@ featuredImage: uploads/1-wrzdzndjcduhwqgopwmbhq.png
 >
 > has written [Part 2](https://medium.com/javascript-in-plain-english/i-created-the-exact-same-app-in-react-and-vue-part-2-angular-39b1aa289878) of this article.
 >
->
->
 > ## Now do it in Svelte!
 >
 > Already done — [It’s right here](https://medium.com/javascript-in-plain-english/i-created-the-exact-same-app-in-react-and-svelte-here-are-the-differences-c0bd2cc9b3f8)!
@@ -347,5 +442,3 @@ featuredImage: uploads/1-wrzdzndjcduhwqgopwmbhq.png
 > Did you know that we have three publications? Show some love by giving them a follow: **[JavaScript in Plain English](https://medium.com/javascript-in-plain-english)**, **[AI in Plain English](https://medium.com/ai-in-plain-english)**, **[Python in Plain English](https://medium.com/python-in-plain-english)** — thank you and keep learning!
 >
 > And as always, Plain English wants to help promote good content. If you have an article that you would like to submit to any of our publications, send an email to **[submissions@plainenglish.io](mailto:submissions@plainenglish.io)** with your Medium username and what you are interested in writing about and we will get back to you!
->
-> <!--EndFragment-->
